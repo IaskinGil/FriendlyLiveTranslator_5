@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Spinner
+        android:id="@+id/onlineUserSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/BrightBlue" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/selectLanguage1"
+            android:layout_width="129dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:entries="@array/lang"
+            android:prompt="@string/choose_lang" />
+
+        <Spinner
+            android:id="@+id/selectLanguage2"
+            android:layout_width="129dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/selectLanguage1"
+            android:entries="@array/lang_2"
+            android:prompt="@string/choose_lang" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/outputScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.76" >
+
+	    <TextView 
+	        android:id="@+id/outputTextView"
+	        android:textSize="18sp"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="5dp" 
+	        android:paddingRight="5dp" 
+	        android:paddingTop="5dp" />
+	</ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <EditText
+            android:id="@+id/textChat"
+            android:layout_width="255dp"
+            android:layout_height="45dp"
+            android:hint="@string/write"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/mic"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textChat"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textChat"
+            android:scaleType="centerInside"
+            android:src="@drawable/microphone512" />
+
+    </RelativeLayout>
+    
+</LinearLayout>

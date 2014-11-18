@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout	xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/textwelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/feedbacktitle"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/BrightBlue"
+            android:textSize="20dp" />
+ 
+	<EditText
+	    android:id="@+id/EditTextName"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:layout_marginTop="5dp"
+	    android:hint="@string/feedbackname"
+	    android:inputType="textPersonName|textCapWords" >
+
+	</EditText>
+
+        <Spinner
+            android:id="@+id/SpinnerFeedbackType"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:entries="@array/feedbacktypelist"
+            android:prompt="@string/feedbacktype" >
+
+		</Spinner>
+
+        <EditText
+            android:id="@+id/EditTextFeedbackBody"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/feedbackbody"
+            android:inputType="textMultiLine"
+            android:lines="5" >
+
+		</EditText>
+
+        <CheckBox
+            android:id="@+id/CheckBoxResponse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/feedbackresponse" >
+
+		</CheckBox>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/ButtonSendFeedback"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:background="@color/BrightBlue"
+                android:text="@string/feedbackbutton" />
+
+        </RelativeLayout>
+	
+</LinearLayout>

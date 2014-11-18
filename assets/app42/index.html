@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript" charset="utf-8" src="js/App42.js"></script>
+</head>
+<body onload="intializeApp42API()">
+	<script type="text/javascript">
+		function intializeApp42API() {
+			App42.initialize('5e9ee0bb2c48c93b1e789fb1f6cdd27f6d720e0773a5882fbe6ce59f72115e5e', '9091980118c8dcc7478486702d91099aa858a37b64d207e1bca7347ea4611546');
+		}
+
+		function pushMessageAlert(msg) {
+			alert(msg)
+		}
+		
+		function registerForPush(deviceId) {
+			var push = new App42Push();
+			push.storeDeviceToken(App42.getLoggedInUser(),deviceId,'ANDROID');
+		
+		}
+
+		function getUser(user)
+		{
+			App42.setLoggedInUser(user);	
+		}
+		
+		function sendPushToUser(pushname) {
+			var push = new App42Push();
+			alert("Sent Push Message To User: " + pushname);
+			var arr = {dataEncoding:true};
+            
+			push.setOtherMetaHeaders(arr);
+		
+			push.sendPushMessageToUser(pushname, "User "+ App42.getLoggedInUser() + " wants to chat with you");
+		}
+	</script>
+</body>
+</html>

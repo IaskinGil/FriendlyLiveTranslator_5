@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/View01"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/BrightBlue" />
+
+    <Button
+        android:id="@+id/logout"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/contact"
+        android:layout_below="@+id/View01"
+        android:layout_marginTop="23dp"
+        android:background="@color/BrightBlue"
+        android:text="Logout" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/contact"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="19dp"
+        android:background="@color/BrightBlue" />
+
+    <Button
+        android:id="@+id/btchangepassMain"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/view1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/BrightBlue"
+        android:text="Change Password" />
+
+    <Button
+        android:id="@+id/contact"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/View01"
+        android:layout_alignEnd="@+id/email"
+        android:layout_alignLeft="@+id/btchangepassMain"
+        android:layout_marginBottom="21dp"
+        android:background="@color/BrightBlue"
+        android:text="Contact Us" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btchangepassMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/setting"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/View02"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/logout"
+        android:layout_marginTop="24dp"
+        android:background="@color/BrightBlue" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/logout"
+        android:layout_alignRight="@+id/logout"
+        android:layout_below="@+id/View02"
+        android:layout_marginTop="26dp"
+        android:background="@color/BrightBlue"
+        android:text="		Send Button" />
+
+</RelativeLayout>
