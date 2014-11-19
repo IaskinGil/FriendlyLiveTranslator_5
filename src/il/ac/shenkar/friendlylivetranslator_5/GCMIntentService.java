@@ -25,7 +25,7 @@ public class GCMIntentService extends GCMBaseIntentService
 	/**
 	 * Intent used to display a message in the screen
 	 **/
-	static final String DISPLAY_MESSAGE_ACTION = "il.ac.shenkar.matchmakingsample.DISPLAY_MESSAGE";
+	static final String DISPLAY_MESSAGE_ACTION = "il.ac.shenkar.friendlylivetranslator_5.DISPLAY_MESSAGE";
 
 	/**
 	 * Intent's extra that contains the message to be displayed
